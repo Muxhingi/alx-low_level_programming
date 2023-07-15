@@ -3,23 +3,29 @@
 #include <stdio.h>
 
 /**
- *  main - Entry point
- *
- *  Return: Always 0 (Success)
+ *  main - print whether the num stored in the variable n is pos or neg.
+ *  Return: 0
  */
 int main(void)
 {
 	        int n;
 
 		        srand(time(0));
-			n = rand() - RAND_MAX / 2;
+		        n = rand() - RAND_MAX / 2;
 
-			if (n == 0)
-			        printf("%d is zero\n", n);
-			else if (n < 0)
-				printf("%d is negative\n", n);
-			else
-				printf("%d is positive\n", n);
+			printf("%d", n);
 
-			        return (0);
+		        if (n > 0)
+			{
+				puts(" is positive");
+			}
+			else if (n == 0)
+			{	
+				puts(" is zero");
+			}
+			else 
+			{
+			        puts(" is negative");
+			}	
+		        return (0);
 }				
